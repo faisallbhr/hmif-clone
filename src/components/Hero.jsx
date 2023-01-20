@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='pt-[72px]'>
+    <div className='pt-16 md:pt-[72px]'>
     <div id='hero' className='text-center lg:text-left'>
       <div className='container'>
       <div className='grid lg:grid-cols-2 gap-8 '>
