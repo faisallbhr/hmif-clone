@@ -15,12 +15,12 @@ const Blog = () => {
       <div className='max-w-6xl px-4 mx-auto py-20 overflow-hidden'>
         {/* BLOG */}
         <div className='flex flex-wrap items-center'>
-          <div className='md:w-1/2 px-12 md:pt-20'>
+          <div className='md:w-1/2 px-20 md:pt-20'>
             <p className='text-3xl font-bold pb-4 '>Blog</p>
-            <p>Cari tahu berbagai informasi, tips dan trik menarik seputar teknologi yang sudah kami rangkum untuk dapat kalian baca kapanpun dan dimanapun.</p>
+            <p className='lg:text-lg'>Cari tahu berbagai informasi, tips dan trik menarik seputar teknologi yang sudah kami rangkum untuk dapat kalian baca kapanpun dan dimanapun.</p>
             <p className='text-gray-400 pt-2'><a href="#">Selengkapnya</a></p>
           </div>
-          <div className='relative md:w-1/2 mt-40 md:-mt-20'>
+          <div className='relative md:left-16 md:w-1/2 mt-40 md:-mt-20'>
               <img data-aos="fade-up-left"
               data-aos-duration="1000"
               className='max-w-[210px] rounded-lg absolute -top-16 left-64' src="https://hmifunej.id/images/beranda/component-article-1.jpg" alt="" />
@@ -34,9 +34,9 @@ const Blog = () => {
         </div>
 
         {/* DIVISION */}
-        <div className='flex flex-wrap items-center mt-80 pt-10 md:pt-0'>
+        <div className='flex flex-wrap items-center mt-80 md:mt-56 pt-10 md:pt-0'>
           {/* LOGO */}
-          <div className='w-full md:w-1/2 flex flex-col lg:flex-row justify-center items-center lg:gap-4'>
+          <div className='w-full mx-10 md:mx-0 md:w-1/2 flex flex-col lg:flex-row justify-center items-center lg:gap-4'>
               <div className='w-full md:w-auto'>
                 <div data-aos="fade-up"
                 data-aos-duration="1000"
@@ -83,9 +83,9 @@ const Blog = () => {
               </div>
           </div>
           {/* PENJELASAN */}
-          <div className='md:w-1/2 py-10 px-10'>
+          <div className='md:w-1/2 py-10 px-20'>
             <p className='text-3xl font-bold pb-4'>Divisi</p>
-            <p>Terdapat lima divisi yang kami miliki dan tiap divisi menjalankan tugasnya masing-masing. Cari tahu lebih lanjut mengenai tugas dan tanggung jawab masing-masing divisi.</p>
+            <p className='lg:text-lg'>Terdapat lima divisi yang kami miliki dan tiap divisi menjalankan tugasnya masing-masing. Cari tahu lebih lanjut mengenai tugas dan tanggung jawab masing-masing divisi.</p>
             <p className='text-gray-400 pt-2'><a href="#">Selengkapnya</a></p>
           </div>
         </div>

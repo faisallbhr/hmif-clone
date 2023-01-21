@@ -6,7 +6,7 @@ const Hero = () => {
     <div id='hero' className='text-left md:text-center lg:text-left'>
       <div className='container'>
       <div className='grid lg:grid-cols-2 gap-8 '>
-        <div className=' lg:pt-24'>
+        <div className=' lg:py-8'>
             <h1 className='font-extrabold text-5xl lg:text-6xl'>Selangkah Lebih Dekat dengan</h1>
             <h1 className='font-extrabold text-5xl lg:text-6xl text-[rgb(16,185,129)]'>HMIF UNEJ</h1>
             <p className='py-8 text-lg lg:text-xl'>Himpunan Mahasiswa Informatika (HMIF) Universitas Jember merupakan organisasi dibawah naungan Fakultas Ilmu komputer yang bertujuan untuk menampung aspirasi serta meningkatkan kualitas mahasiswa di dalam lingkungan program studi Informatika Universitas Jember.</p>

@@ -33,7 +33,7 @@ const Navbar = () => {
 
             {/* DESKTOP MODE */}
             <div>
-              <ul className='hidden md:flex gap-4 text-sm font-semibold -mt-1'>
+              <ul className='hidden md:flex gap-4 text-sm lg:text-base font-semibold -mt-1'>
                 <li>Beranda</li>
                 <li>Tentang</li>
                 <li>Staf</li>
