@@ -23,13 +23,13 @@ const Blog = () => {
           <div className='relative md:w-1/2 mt-40 md:-mt-20'>
               <img data-aos="fade-up-left"
               data-aos-duration="1000"
-              className='max-w-[210px] rounded-lg absolute -top-16 left-72' src="https://hmifunej.id/images/beranda/component-article-1.jpg" alt="" />
+              className='max-w-[210px] rounded-lg absolute -top-16 left-64' src="https://hmifunej.id/images/beranda/component-article-1.jpg" alt="" />
               <img data-aos="zoom-in"
               data-aos-duration="1000"
-              className='max-w-[180px] rounded-lg absolute -top-24 left-20' src="https://hmifunej.id/images/beranda/component-article-2.jpg" alt="" />
+              className='max-w-[180px] rounded-lg absolute -top-24 left-12' src="https://hmifunej.id/images/beranda/component-article-2.jpg" alt="" />
               <img data-aos="fade-up-right"
               data-aos-duration="1000"
-              className='max-w-[200px] rounded-lg absolute top-36 left-0 right-0' src="https://hmifunej.id/images/beranda/component-article-3.jpg" alt="" />
+              className='max-w-[200px] rounded-lg absolute top-36 -left-5 right-0' src="https://hmifunej.id/images/beranda/component-article-3.jpg" alt="" />
          </div>
         </div>
 
