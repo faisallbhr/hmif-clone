@@ -25,7 +25,7 @@ const Navbar = () => {
     }
   })
   return (
-    <div className='fixed w-full bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10'>  
+    <div className='fixed w-full bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10' ref={menuRef}>  
           <div className='flex items-center justify-between py-4 px-6 max-w-7xl mx-auto'>
             <div>
                 <img className='h-8 md:h-10' src="https://hmifunej.id/images/HMIF%20WORDMARK%20LOGO.png" alt="" />
