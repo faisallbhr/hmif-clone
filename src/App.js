@@ -14,7 +14,7 @@ function App() {
       <Features />
       <Blog />
       <BlogDetails />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }
