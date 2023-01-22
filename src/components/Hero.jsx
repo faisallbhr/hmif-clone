@@ -9,7 +9,7 @@ const Hero = () => {
         <div className=' lg:py-8'>
             <h1 className='font-extrabold text-5xl lg:text-6xl'>Selangkah Lebih Dekat dengan</h1>
             <h1 className='font-extrabold text-5xl lg:text-6xl text-[rgb(16,185,129)]'>HMIF UNEJ</h1>
-            <p className='py-8 md:text-lg lg:text-xl'>Himpunan Mahasiswa Informatika (HMIF) Universitas Jember merupakan organisasi dibawah naungan Fakultas Ilmu komputer yang bertujuan untuk menampung aspirasi serta meningkatkan kualitas mahasiswa di dalam lingkungan program studi Informatika Universitas Jember.</p>
+            <p className='py-8 md:text-lg  lg:text-xl'>Himpunan Mahasiswa Informatika (HMIF) Universitas Jember merupakan organisasi dibawah naungan Fakultas Ilmu komputer yang bertujuan untuk menampung aspirasi serta meningkatkan kualitas mahasiswa di dalam lingkungan program studi Informatika Universitas Jember.</p>
           <div className='text-center flex flex-col md:flex-row md:justify-center lg:justify-start gap-2'>
               <p className='bg-[rgb(16,185,129)] rounded-[4px] text-lg py-2 font-bold md:px-6'>Tentang</p>
               <p className='rounded-[4px] border-[2px] border-[rgb(16,185,129)] text-lg py-2 font-bold md:px-6'>Card</p>

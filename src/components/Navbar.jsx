@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
 
             <div className={open? 'menu' : 'hidden'}>
-              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 py-3'>
+              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 pt-3 pb-1'>
                 <li>Beranda</li>
                 <li className='my-1'>Tentang</li>
                 <li className='my-1'>Staf</li>
