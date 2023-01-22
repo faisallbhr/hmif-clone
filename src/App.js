@@ -3,6 +3,7 @@ import Blog from "./components/Blog";
 import BlogDetails from "./components/BlogDetails";
 import Contact from "./components/Contact";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
@@ -15,6 +16,7 @@ function App() {
       <Blog />
       <BlogDetails />
       <Contact />
+      <Footer />
     </div>
   );
 }
