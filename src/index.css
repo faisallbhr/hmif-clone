@@ -65,3 +65,7 @@
 .active{
     @apply text-[rgb(16,185,129)];
 }
+
+.active:after{
+    display: hidden;
+}

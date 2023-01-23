@@ -23,11 +23,10 @@ function App() {
         <BounceLoader color='rgb(16,185,129)' loading={loading}/>
       </div> : 
         <BrowserRouter>
-        <Navbar/>
         <Routes>
           <Route path="/" element={<Homepage/> }></Route>
           <Route path="/about" element={<Aboutpage/> }></Route>
-          <Route path="/*" element={<Capek/> }></Route>
+          <Route path="*" element={<Capek/> }></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

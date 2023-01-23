@@ -26,7 +26,7 @@ const Navbar = () => {
     }
   })
   return (
-    <div className='fixed w-full bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10' ref={menuRef}>  
+    <header className='fixed w-full bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10' ref={menuRef}>  
           <div className='flex items-center justify-between py-4 px-6 max-w-7xl mx-auto'>
             <div>
                 <img className='h-8 md:h-10' src="https://hmifunej.id/images/HMIF%20WORDMARK%20LOGO.png" alt="" />
@@ -54,8 +54,8 @@ const Navbar = () => {
             </div>
 
             {/* MOBILE MODE */}
-            <div onClick={handleOpen} className='text-white cursor-pointer md:hidden z-50'>
-                {!open? <RxHamburgerMenu className='w-5 h-5'/> : <RiCloseFill className='w-5 h-5 scale-125 z-50'/>}
+            <div onClick={handleOpen} className='text-white cursor-pointer md:hidden '>
+                {!open? <RxHamburgerMenu className='w-5 h-5'/> : <RiCloseFill className='w-5 h-5 scale-125 '/>}
             </div>
 
             <div className={open? 'menu md:hidden' : 'hidden'}>
@@ -77,7 +77,7 @@ const Navbar = () => {
               </ul>
             </div>
         </div>
-    </div>
+    </header>
   )
 }
 
