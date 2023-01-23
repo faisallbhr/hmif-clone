@@ -43,7 +43,10 @@ const Navbar = () => {
               </ul>
             </div>
             <div className='hidden md:block'>
-              <DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={50}/>
+              <input type="checkbox" id="toggle-cbx" className='hidden' />
+              <label 
+              className='w-[40px] h-[20px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
+              for="toggle-cbx" id='toggle'></label>
             </div>
 
             {/* MOBILE MODE */}
@@ -52,14 +55,19 @@ const Navbar = () => {
             </div>
 
             <div className={open? 'menu' : 'hidden'}>
-              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 pt-3 pb-1'>
-                <li>Beranda</li>
+              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-lg md:hidden'>
+                <li className='my-1'>Beranda</li>
                 <li className='my-1'>Tentang</li>
                 <li className='my-1'>Staf</li>
                 <li className='my-1'>Proker</li>
                 <li className='my-1'>Blog</li>
                 <li className='my-1'>Portofolio</li>
-                <li className='pt-1'><DarkModeToggle onChange={setIsDarkMode} checked={isDarkMode} size={50}/></li>
+                <li className='flex justify-center my-2'>
+                  <input type="checkbox" id="toggle-cbx" className='hidden' />
+                  <label 
+                  className='w-[40px] h-[20px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
+                  for="toggle-cbx" id='toggle'></label>
+                </li>
               </ul>
             </div>
         </div>

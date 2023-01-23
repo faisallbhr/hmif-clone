@@ -6,10 +6,15 @@ import {MdNavigateNext} from 'react-icons/md'
 const Features = () => {
   return (
     <div className='container'>
-        <div className='font-bold text-3xl md:text-4xl pb-8'>
+        <div className='font-bold text-3xl md:text-4xl'>
             Jelajahi <br /> Semua Fitur yang Tersedia
         </div>
-        <div className='grid grid-cols-1 pb-20 md:grid-cols-2 xl:grid-cols-4 gap-8'>
+        <div>
+            <span className='inline-block mr-2 w-40 h-1 rounded-full bg-[rgb(16,185,129)]'></span>
+            <span className='inline-block mr-2 w-3 h-1 rounded-full bg-[rgb(16,185,129)]'></span>
+            <span className='inline-block mr-2 w-1 h-1 rounded-full bg-[rgb(16,185,129)]'></span>
+        </div>
+        <div className='grid grid-cols-1 pt-10 pb-20 md:grid-cols-2 xl:grid-cols-4 gap-8'>
             <div className='border-[2px] rounded-xl border-green-300'>
                 <div className='p-10'>
                     <RiFilePaper2Line className='h-12 w-12 text-[rgb(16,185,129)]'/>
