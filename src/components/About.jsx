@@ -21,8 +21,8 @@ const About = () => {
 
         {/* 2 */}
         <div className='container'>
-            <div className='flex flex-col md:flex-row gap-6 justify-center items-center'>
-                <h1 className='text-6xl font-extrabold'>TENTANG HMIF</h1>
+            <div className='flex flex-col md:flex-row gap-6 md:gap-16 justify-center items-center'>
+                <h1 className='text-6xl font-extrabold text-center'>TENTANG HMIF</h1>
                 <img className='h-80 lg:h-96' src="https://hmifunej.id/images/HMIF-LOGO-BESAR.png" alt="" />
             </div>
         </div>
