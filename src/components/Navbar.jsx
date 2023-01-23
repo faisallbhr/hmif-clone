@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {RiCloseFill} from 'react-icons/ri'
-import DarkModeToggle from "react-dark-mode-toggle";
+import {BsSun,BsMoonStars, BsMoon} from 'react-icons/bs'
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => true);
@@ -43,10 +43,13 @@ const Navbar = () => {
               </ul>
             </div>
             <div className='hidden md:block'>
-              <input type="checkbox" id="toggle-cbx" className='hidden' />
+              <input type="checkbox" id="darkmode-toggle" className='hidden darkmode' />
               <label 
-              className='w-[40px] h-[20px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
-              for="toggle-cbx" id='toggle'></label>
+              className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
+              htmlFor="darkmode-toggle">
+                <BsMoon className='moon'/>
+                <BsSun className='sun'/>
+              </label>
             </div>
 
             {/* MOBILE MODE */}
@@ -54,8 +57,8 @@ const Navbar = () => {
                 {!open? <RxHamburgerMenu className='w-5 h-5'/> : <RiCloseFill className='w-5 h-5 scale-125 z-50'/>}
             </div>
 
-            <div className={open? 'menu' : 'hidden'}>
-              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-lg md:hidden'>
+            <div className={open? 'menu md:hidden' : 'hidden'}>
+              <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-lg'>
                 <li className='my-1'>Beranda</li>
                 <li className='my-1'>Tentang</li>
                 <li className='my-1'>Staf</li>
@@ -63,10 +66,13 @@ const Navbar = () => {
                 <li className='my-1'>Blog</li>
                 <li className='my-1'>Portofolio</li>
                 <li className='flex justify-center my-2'>
-                  <input type="checkbox" id="toggle-cbx" className='hidden' />
+                  <input type="checkbox" id="darkmode-toggle-mbl" className='hidden darkmode' />
                   <label 
-                  className='w-[40px] h-[20px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
-                  for="toggle-cbx" id='toggle'></label>
+                  className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
+                  for="darkmode-toggle-mbl">
+                    <BsMoon className='moon'/>
+                    <BsSun className='sun'/>
+                  </label>
                 </li>
               </ul>
             </div>
