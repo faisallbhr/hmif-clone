@@ -1,22 +1,24 @@
 import React from "react";
-import Blog from "./components/Blog";
-import BlogDetails from "./components/BlogDetails";
-import Contact from "./components/Contact";
-import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import 'swiper/css/bundle';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Aboutpage from "./pages/Aboutpage";
+import Capek from "./pages/Capek";
 
 function App() {
   return (
     <div className="App bg-[rgb(31,41,55)] text-white">
-      <Navbar/>
-      <Hero />
-      <Features />
-      <Blog />
-      <BlogDetails />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Homepage/> }></Route>
+          <Route path="/about" element={<Aboutpage/> }></Route>
+          <Route path="/*" element={<Capek/> }></Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

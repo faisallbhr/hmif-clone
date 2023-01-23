@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useRef} from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {RiCloseFill} from 'react-icons/ri'
-import {BsSun,BsMoonStars, BsMoon} from 'react-icons/bs'
+import {BsSun,BsMoonStars} from 'react-icons/bs'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => true);
@@ -34,12 +35,12 @@ const Navbar = () => {
             {/* DESKTOP MODE */}
             <div>
               <ul className='hidden md:flex gap-4 text-sm lg:text-base font-semibold -mt-1'>
-                <li>Beranda</li>
-                <li>Tentang</li>
-                <li>Staf</li>
-                <li>Proker</li>
-                <li>Blog</li>
-                <li>Portofolio</li>
+                <li><NavLink className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/about'>Tentang</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/blog'>Blog</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/portofolio'>Portofolio</NavLink></li>
               </ul>
             </div>
             <div className='hidden md:block'>
@@ -47,7 +48,7 @@ const Navbar = () => {
               <label 
               className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
               htmlFor="darkmode-toggle">
-                <BsMoon className='moon'/>
+                <BsMoonStars className='moon'/>
                 <BsSun className='sun'/>
               </label>
             </div>
@@ -59,18 +60,17 @@ const Navbar = () => {
 
             <div className={open? 'menu md:hidden' : 'hidden'}>
               <ul className='bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-lg'>
-                <li className='my-1'>Beranda</li>
-                <li className='my-1'>Tentang</li>
-                <li className='my-1'>Staf</li>
-                <li className='my-1'>Proker</li>
-                <li className='my-1'>Blog</li>
-                <li className='my-1'>Portofolio</li>
+                <li><NavLink className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/about'>Tentang</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/portofolio'>Portofolio</NavLink></li>
                 <li className='flex justify-center my-2'>
                   <input type="checkbox" id="darkmode-toggle-mbl" className='hidden darkmode' />
                   <label 
                   className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
                   for="darkmode-toggle-mbl">
-                    <BsMoon className='moon'/>
+                    <BsMoonStars className='moon'/>
                     <BsSun className='sun'/>
                   </label>
                 </li>
