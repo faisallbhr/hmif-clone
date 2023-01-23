@@ -61,11 +61,7 @@
     fill: #7e7e7e;
 }
 
-.nav:hover,
-.active:after{
+.nav:after,
+.active{
     @apply text-[rgb(16,185,129)];
-}
-
-.active {
-  @apply text-[rgb(16,185,129)];
 }
