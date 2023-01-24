@@ -80,7 +80,7 @@ const About = () => {
         </div>
 
         {/* 4 */}
-        <div className="px-6 py-20 max-w-4xl mx-auto bg-gray-100 dark:bg-gray-800">
+        <div className="px-6 my-20 py-20 max-w-4xl mx-auto bg-gray-100 rounded-md shadow-xl dark:bg-gray-800">
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20 text-black dark:text-white'>
                     <div className='flex flex-col mx-auto items-center max-w-[205px]'>
                         <div className='bg-green-100 shadow-xl w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>

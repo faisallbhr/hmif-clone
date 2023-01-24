@@ -5,7 +5,7 @@ import { MdEmail } from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <div className='bg-white dark:bg-gray-900 text-gray-700 dark:text-white'>
+    <div className='bg-white dark:bg-gray-900 mt-10 text-gray-700 dark:text-white'>
         <div className='container flex flex-col md:flex-row gap-2 justify-between'>
             <div className='md:flex items-center gap-4 mr-4'>
                 <img id='hmif-footer'
