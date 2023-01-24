@@ -11,40 +11,40 @@ const About = () => {
   return (
     <div className='pt-16 md:pt-[72px] '>
         {/* 1 */}
-        <div className='bg-gray-900 text-center'>
+        <div className='bg-gray-100 dark:bg-gray-900 text-center'>
             <div className='px-6 py-20 max-w-xl mx-auto'>
                 <span className='bg-green-600 text-sm px-3 rounded-full font-bold'>TENTANG</span>
-                <h1 className='font-bold text-3xl md:text-4xl py-3'>Tentang HMIF UNEJ</h1>
-                <p className='pt-3 text-gray-300 md:text-xl'>Cari tau lebih dalam mengenai Himpunan Mahasiswa Informatika Universitas Jember.</p>
+                <h1 className='dark:text-white text-gray-900 font-bold text-3xl md:text-4xl py-3'>Tentang HMIF UNEJ</h1>
+                <p className='pt-3 text-gray-500 dark:text-gray-300 md:text-xl'>Cari tau lebih dalam mengenai Himpunan Mahasiswa Informatika Universitas Jember.</p>
             </div>
         </div>
 
         {/* 2 */}
         <div className='container'>
             <div className='flex flex-col md:flex-row gap-6 md:gap-16 justify-center items-center'>
-                <h1 className='text-6xl font-extrabold text-center'>TENTANG HMIF</h1>
+                <h1 className='text-6xl text-black dark:text-white font-extrabold text-center'>TENTANG HMIF</h1>
                 <img className='h-80 lg:h-96' src="https://hmifunej.id/images/HMIF-LOGO-BESAR.png" alt="" />
             </div>
         </div>
         <div className='container'>
-            <span className='w-full inline-block h-[1px] bg-white'></span>
+            <span className='w-full inline-block h-[1px] bg-gray-300'></span>
         </div>
         <div className='container'>
-            <h1 className='font-bold text-2xl md:text-3xl text-center'>Sejarah</h1>
-            <p className='text-gray-300 py-4 px-8'>HMIF adalah organisasi kemahasiswaan di tingkat program studi informatika yang di bentuk oleh mahasiswa program studi informatika yang berdiri pada tahun 2018 serta melaksanakan kegiatan yang menunjang akademik dan non akademik di lingkup program studi informatika yang bersifat eksekutif, aspiratif, dan advokatif. HMIF berfungsi sebagai wadah komunikasi, pemersatu, menggali dan mengembangkan potensi bagi para anggotanya untuk mewujudkan mahasiswa yang unggul di bidang iptek.</p>
+            <h1 className='text-gray-700 dark:text-white font-bold text-2xl md:text-3xl text-center'>Sejarah</h1>
+            <p className='text-gray-500 dark:text-gray-300 py-4 px-8'>HMIF adalah organisasi kemahasiswaan di tingkat program studi informatika yang di bentuk oleh mahasiswa program studi informatika yang berdiri pada tahun 2018 serta melaksanakan kegiatan yang menunjang akademik dan non akademik di lingkup program studi informatika yang bersifat eksekutif, aspiratif, dan advokatif. HMIF berfungsi sebagai wadah komunikasi, pemersatu, menggali dan mengembangkan potensi bagi para anggotanya untuk mewujudkan mahasiswa yang unggul di bidang iptek.</p>
         </div>
         <div className='container'>
-            <span className='w-full inline-block h-[1px] bg-white'></span>
+            <span className='w-full inline-block h-[1px] bg-gray-300'></span>
         </div>
         <div className='container'>
-            <h1 className='font-bold text-2xl md:text-3xl text-center'>Makna Logo</h1>
-            <p className='text-gray-300 py-4 px-8'>1. Tiga bentuk hexagon melambangkan bahwa Informatika merupakan Program Studi ke-3 yang berada di Fakultas Ilmu Komputer Universitas Jember. <br />2. Lambang infinity berasal dari angka 8 yang merupakan tanggal terbentuknya Himpunan Mahasiswa Informatika (HMIF) yang melambangkan rasa kebersamaan, sifat gotong royong dan ikatan yang kuat. <br />3. Warna kuning melambangkan kreativitas dan inovasi generasi muda/generasi emas. Kuning juga melambangkan kehangatan yang berarti inovasi yang dibuat harus memberikan kehangatan bagi diri sendiri dan orang lain Warna abu-abu melambangkan warna identitas Fakultas Ilmu Komputer Universitas Jember.</p>
+            <h1 className='text-gray-700 dark:text-white font-bold text-2xl md:text-3xl text-center'>Makna Logo</h1>
+            <p className='text-gray-500 dark:text-gray-300 py-4 px-8'>1. Tiga bentuk hexagon melambangkan bahwa Informatika merupakan Program Studi ke-3 yang berada di Fakultas Ilmu Komputer Universitas Jember. <br />2. Lambang infinity berasal dari angka 8 yang merupakan tanggal terbentuknya Himpunan Mahasiswa Informatika (HMIF) yang melambangkan rasa kebersamaan, sifat gotong royong dan ikatan yang kuat. <br />3. Warna kuning melambangkan kreativitas dan inovasi generasi muda/generasi emas. Kuning juga melambangkan kehangatan yang berarti inovasi yang dibuat harus memberikan kehangatan bagi diri sendiri dan orang lain Warna abu-abu melambangkan warna identitas Fakultas Ilmu Komputer Universitas Jember.</p>
         </div>
 
         {/* 3 */}
-        <div className='bg-gray-900 py-10'>
+        <div className='dark:bg-gray-900 py-10'>
             <div className="container">
-                <div className="bg-gray-600 rounded-md lg:py-10">
+                <div className="bg-green-200 dark:bg-gray-600 rounded-md lg:py-10">
                     <Swiper
                     pagination={{clickable: true}}
                     modules={{Pagination}}
@@ -52,8 +52,8 @@ const About = () => {
                     >
                         <SwiperSlide className='flex flex-col lg:flex-row items-center'>
                             <div className='px-10 lg:px-20 py-10 max-w-xl'>
-                                <h1 className='font-bold text-2xl'>Visi</h1>
-                                <p className='text-gray-200 py-4'>Mewujudkan HMIF sebagai rumah kolaboratif demi terciptanya optimalisasi potensi dan kebermanfaatan bagi keluarga besar mahasiswa informatika</p>
+                                <h1 className='font-bold text-2xl text-gray-700 dark:text-gray-200'>Visi</h1>
+                                <p className='text-gray-700 dark:text-gray-200 py-4'>Mewujudkan HMIF sebagai rumah kolaboratif demi terciptanya optimalisasi potensi dan kebermanfaatan bagi keluarga besar mahasiswa informatika</p>
                             </div>
                             <div className='lg:pr-20'>
                                 <img className='mx-auto' src="https://hmifunej.id/images/visi.svg" alt="" />
@@ -61,8 +61,8 @@ const About = () => {
                         </SwiperSlide>
                         <SwiperSlide className='flex flex-col lg:flex-row items-center'>
                             <div className='px-10 lg:px-20  py-10 max-w-xl'>
-                                <h1 className='font-bold text-2xl'>Misi</h1>
-                                <p className='text-gray-200 py-4'>1. Menciptakan budaya organisasi yang apresiatif dan suportif.
+                                <h1 className='font-bold text-2xl text-gray-700 dark:text-gray-200'>Misi</h1>
+                                <p className='text-gray-700 dark:text-gray-200 py-4'>1. Menciptakan budaya organisasi yang apresiatif dan suportif.
                                 <br /> <br />
                                 2. Melanjutkan dan memaksimalkan kualitas program kerja yang bermanfaat dan tepat sasaran untuk mahasiswa informatika.
                                 <br /> <br />
@@ -80,10 +80,10 @@ const About = () => {
         </div>
 
         {/* 4 */}
-        <div className="px-6 py-20 max-w-4xl mx-auto">
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
+        <div className="px-6 py-20 max-w-4xl mx-auto bg-gray-100 dark:bg-gray-800">
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-20 text-black dark:text-white'>
                     <div className='flex flex-col mx-auto items-center max-w-[205px]'>
-                        <div className='bg-green-100 w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
+                        <div className='bg-green-100 shadow-xl w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
                             <MdMap className='h-16 w-16'/>
                         </div>
                         <div>
@@ -92,7 +92,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className='flex flex-col mx-auto items-center max-w-[205px]'>
-                        <div className='bg-green-100 w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
+                        <div className='bg-green-100 shadow-xl w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
                             <MdCall className='h-16 w-16'/>
                         </div>
                         <div>
@@ -101,7 +101,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className='flex flex-col mx-auto items-center max-w-[205px]'>
-                        <div className='bg-green-100 w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
+                        <div className='bg-green-100 shadow-xl w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>
                             <MdMail className='h-16 w-16'/>
                         </div>
                         <div>
