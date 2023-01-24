@@ -16,7 +16,7 @@
 }
 
 .menu{
-    @apply absolute w-full left-0 top-0 bg-[rgba(0,0,0,.3)] text-center py-2;
+    @apply absolute w-full left-0 top-0 bg-gray-900 bg-opacity-50 dark:bg-[rgba(0,0,0,.3)] text-center py-2;
 }
 
 .toggle::after{
@@ -68,4 +68,12 @@
 
 .active:after{
     display: hidden;
+}
+
+#hmif{
+    filter:drop-shadow(2px 2px 4px rgba(0,0,0,.3));
+}
+
+#hmif-footer{
+    filter:drop-shadow(2px 2px 4px rgba(0,0,0,.3));
 }

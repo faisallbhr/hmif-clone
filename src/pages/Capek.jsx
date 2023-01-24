@@ -5,7 +5,7 @@ import Picture from '../assets/projectnf.png'
 const Capek = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className='h-screen flex justify-center items-center'>
         <div className='container'>
           <img src={Picture} alt="" />

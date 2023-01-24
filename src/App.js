@@ -17,12 +17,13 @@ function App() {
     }, 1500);
   }, [])
   return (
-    <div className="App bg-[rgb(31,41,55)] text-white">
+    <div className="App bg-white dark:bg-[rgb(31,41,55)] text-white">
       {loading? 
-      <div className='bg-[#ebebeb] flex items-center justify-center h-screen'>
+      <div className='bg-[#b5b5bd] flex items-center justify-center h-screen'>
         <BounceLoader color='rgb(16,185,129)' loading={loading}/>
       </div> : 
         <BrowserRouter>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Homepage/> }></Route>
           <Route path="/about" element={<Aboutpage/> }></Route>
