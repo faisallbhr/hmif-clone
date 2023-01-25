@@ -31,14 +31,14 @@ const About = () => {
         </div>
         <div className='container'>
             <h1 className='text-gray-700 dark:text-white font-bold text-2xl md:text-3xl text-center'>Sejarah</h1>
-            <p className='text-gray-500 dark:text-gray-300 py-4 px-8'>HMIF adalah organisasi kemahasiswaan di tingkat program studi informatika yang di bentuk oleh mahasiswa program studi informatika yang berdiri pada tahun 2018 serta melaksanakan kegiatan yang menunjang akademik dan non akademik di lingkup program studi informatika yang bersifat eksekutif, aspiratif, dan advokatif. HMIF berfungsi sebagai wadah komunikasi, pemersatu, menggali dan mengembangkan potensi bagi para anggotanya untuk mewujudkan mahasiswa yang unggul di bidang iptek.</p>
+            <p className='text-gray-500 dark:text-gray-300 py-4 md:px-8'>HMIF adalah organisasi kemahasiswaan di tingkat program studi informatika yang di bentuk oleh mahasiswa program studi informatika yang berdiri pada tahun 2018 serta melaksanakan kegiatan yang menunjang akademik dan non akademik di lingkup program studi informatika yang bersifat eksekutif, aspiratif, dan advokatif. HMIF berfungsi sebagai wadah komunikasi, pemersatu, menggali dan mengembangkan potensi bagi para anggotanya untuk mewujudkan mahasiswa yang unggul di bidang iptek.</p>
         </div>
         <div className='container'>
             <span className='w-full inline-block h-[1px] bg-gray-300'></span>
         </div>
         <div className='container'>
             <h1 className='text-gray-700 dark:text-white font-bold text-2xl md:text-3xl text-center'>Makna Logo</h1>
-            <p className='text-gray-500 dark:text-gray-300 py-4 px-8'>1. Tiga bentuk hexagon melambangkan bahwa Informatika merupakan Program Studi ke-3 yang berada di Fakultas Ilmu Komputer Universitas Jember. <br />2. Lambang infinity berasal dari angka 8 yang merupakan tanggal terbentuknya Himpunan Mahasiswa Informatika (HMIF) yang melambangkan rasa kebersamaan, sifat gotong royong dan ikatan yang kuat. <br />3. Warna kuning melambangkan kreativitas dan inovasi generasi muda/generasi emas. Kuning juga melambangkan kehangatan yang berarti inovasi yang dibuat harus memberikan kehangatan bagi diri sendiri dan orang lain Warna abu-abu melambangkan warna identitas Fakultas Ilmu Komputer Universitas Jember.</p>
+            <p className='text-gray-500 dark:text-gray-300 py-4 md:px-8'>1. Tiga bentuk hexagon melambangkan bahwa Informatika merupakan Program Studi ke-3 yang berada di Fakultas Ilmu Komputer Universitas Jember. <br />2. Lambang infinity berasal dari angka 8 yang merupakan tanggal terbentuknya Himpunan Mahasiswa Informatika (HMIF) yang melambangkan rasa kebersamaan, sifat gotong royong dan ikatan yang kuat. <br />3. Warna kuning melambangkan kreativitas dan inovasi generasi muda/generasi emas. Kuning juga melambangkan kehangatan yang berarti inovasi yang dibuat harus memberikan kehangatan bagi diri sendiri dan orang lain Warna abu-abu melambangkan warna identitas Fakultas Ilmu Komputer Universitas Jember.</p>
         </div>
 
         {/* 3 */}
@@ -46,7 +46,10 @@ const About = () => {
             <div className="container">
                 <div className="bg-green-200 dark:bg-gray-600 rounded-md lg:py-10">
                     <Swiper
-                    pagination={{clickable: true}}
+                    pagination={{
+                        clickable: true, 
+                        el:'.swiper-pagination',
+                    }}
                     modules={{Pagination}}
                     className="mySwiper"
                     >
@@ -74,13 +77,14 @@ const About = () => {
                                 <img className='mx-auto' src="https://hmifunej.id/images/misi.svg" alt="" />
                             </div>
                         </SwiperSlide>
+                        <div className='swiper-pagination w-full '></div>
                     </Swiper>
                 </div>
             </div>
         </div>
 
         {/* 4 */}
-        <div className="px-6 my-20 py-20 max-w-4xl mx-auto bg-gray-100 rounded-md shadow-xl dark:bg-gray-800">
+        <div className="px-6 my-20 py-20 max-w-4xl mx-6 md:mx-auto bg-gray-100 rounded-md shadow-xl dark:bg-gray-800">
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20 text-black dark:text-white'>
                     <div className='flex flex-col mx-auto items-center max-w-[205px]'>
                         <div className='bg-green-100 shadow-xl w-28 h-28 rounded-full text-green-500 flex justify-center items-center'>

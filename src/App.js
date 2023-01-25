@@ -7,6 +7,7 @@ import Homepage from "./pages/Homepage";
 import Aboutpage from "./pages/Aboutpage";
 import Capek from "./pages/Capek";
 import { BounceLoader } from "react-spinners";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         <BounceLoader color='rgb(16,185,129)' loading={loading}/>
       </div> : 
         <BrowserRouter>
+        <ScrollToTop>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Homepage/> }></Route>
@@ -30,6 +32,7 @@ function App() {
           <Route path="*" element={<Capek/> }></Route>
         </Routes>
         <Footer />
+        </ScrollToTop>
       </BrowserRouter>
       }
     </div>

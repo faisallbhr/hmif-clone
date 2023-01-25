@@ -77,3 +77,8 @@
 #hmif-footer{
     filter:drop-shadow(2px 2px 4px rgba(0,0,0,.3));
 }
+
+
+.swiper-pagination-bullet-active{
+    background-color: rgb(16,185,129) !important;
+}
