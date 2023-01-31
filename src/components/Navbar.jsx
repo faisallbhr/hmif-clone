@@ -24,21 +24,22 @@ const Navbar = () => {
     return() =>{
       document.removeEventListener("mousedown", handler);
     }
-  })
+  }, [menuRef])
 
   // DARKMODE
   const [theme, setTheme] = useState('dark')
+  
+  const toggleTheme = () => {
+      setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
   useEffect(() => {
     if (theme==='dark'){
     document.documentElement.classList.add('dark')
     }else{
     document.documentElement.classList.remove('dark')
     }
-  })
-
-  const toggleTheme = () => {
-      setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  }, [toggleTheme])
 
   return (
     <header className='fixed w-full bg-[hsla(0,0%,100%,.6)] dark:bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10' ref={menuRef}>  
@@ -51,7 +52,7 @@ const Navbar = () => {
             <div>
               <ul className='hidden md:flex gap-4 text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-100'>
                 <li><NavLink className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/about'>Tentang</NavLink></li>
+                <li><NavLink className='nav' activeClassName='active' to='/tentang'>Tentang</NavLink></li>
                 <li><NavLink className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
                 <li><NavLink className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
                 <li><NavLink className='nav' activeClassName='active' to='/blog'>Blog</NavLink></li>
@@ -94,7 +95,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            {/* MOBILE MODE START*/}
+            {/* MOBILE MODE END*/}
         </div>
     </header>
   )

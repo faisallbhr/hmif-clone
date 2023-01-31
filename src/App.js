@@ -28,7 +28,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Homepage/> }></Route>
-          <Route path="/about" element={<Aboutpage/> }></Route>
+          <Route path="/tentang" element={<Aboutpage/> }></Route>
           <Route path="*" element={<Capek/> }></Route>
         </Routes>
         <Footer />
