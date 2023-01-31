@@ -79,7 +79,7 @@ const Navbar = () => {
             <div className={open? 'menu md:hidden' : 'hidden'}>
               <ul className='bg-white text-gray-900 dark:text-gray-100 dark:bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-xl'>
                 <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/about'>Tentang</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/tentang'>Tentang</NavLink></li>
                 <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
                 <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
                 <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/portofolio'>Portofolio</NavLink></li>
