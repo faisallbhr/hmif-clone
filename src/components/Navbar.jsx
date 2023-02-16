@@ -51,16 +51,16 @@ const Navbar = () => {
             {/* DESKTOP MODE START*/}
             <div>
               <ul className='hidden md:flex gap-4 text-sm lg:text-base font-semibold text-gray-900 dark:text-gray-100'>
-                <li><NavLink className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/tentang'>Tentang</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/blog'>Blog</NavLink></li>
-                <li><NavLink className='nav' activeClassName='active' to='/portofolio'>Portofolio</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/'>Beranda</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/tentang'>Tentang</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/staf'>Staf</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/proker'>Proker</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/blog'>Blog</NavLink></li>
+                <li><NavLink className='nav' activeclassname='active' to='/portofolio'>Portofolio</NavLink></li>
               </ul>
             </div>
             <div className='hidden md:block'>
-              <input checked={theme === 'light'} type="checkbox" id="darkmode-toggle" className='hidden darkmode' />
+              <input defaultChecked={theme === 'light'} type="checkbox" id="darkmode-toggle" className='hidden darkmode' />
               <label 
               onClick={toggleTheme}
               className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
@@ -78,17 +78,17 @@ const Navbar = () => {
 
             <div className={open? 'menu md:hidden' : 'hidden'}>
               <ul className='bg-white text-gray-900 dark:text-gray-100 dark:bg-[rgb(55,65,81)] rounded-md mx-2 py-2 font-semibold text-xl'>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/'>Beranda</NavLink></li>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/tentang'>Tentang</NavLink></li>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/staf'>Staf</NavLink></li>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/proker'>Proker</NavLink></li>
-                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeClassName='active' to='/portofolio'>Portofolio</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeclassname='active' to='/'>Beranda</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeclassname='active' to='/tentang'>Tentang</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeclassname='active' to='/staf'>Staf</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeclassname='active' to='/proker'>Proker</NavLink></li>
+                <li className='py-2'><NavLink onClick={handleOpen} className='nav' activeclassname='active' to='/portofolio'>Portofolio</NavLink></li>
                 <li className='flex justify-center py-2'>
-                  <input checked={theme === 'light'} type="checkbox" id="darkmode-toggle-mbl" className='hidden darkmode' />
+                  <input defaultChecked={theme === 'light'} type="checkbox" id="darkmode-toggle-mbl" className='hidden darkmode' />
                   <label 
                   onClick={toggleTheme}
                   className='toggle w-[50px] h-[25px] relative block bg-[#242424] border border-gray-500 rounded-full cursor-pointer '
-                  for="darkmode-toggle-mbl">
+                  htmlFor="darkmode-toggle-mbl">
                     <BsMoonStars className='moon'/>
                     <BsSun className='sun'/>
                   </label>

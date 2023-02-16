@@ -8,6 +8,7 @@ import Aboutpage from "./pages/Aboutpage";
 import Capek from "./pages/Capek";
 import { BounceLoader } from "react-spinners";
 import ScrollToTop from "./components/ScrollToTop";
+import StaffPage from "./pages/StaffPage";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage/> }></Route>
           <Route path="/tentang" element={<Aboutpage/> }></Route>
+          <Route path="/staf" element={<StaffPage/> }></Route>
           <Route path="*" element={<Capek/> }></Route>
         </Routes>
         <Footer />

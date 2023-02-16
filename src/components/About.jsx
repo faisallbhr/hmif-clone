@@ -15,7 +15,7 @@ const About = () => {
             <div className='px-6 py-20 max-w-xl mx-auto'>
                 <span className='bg-green-600 text-sm px-3 rounded-full font-bold'>TENTANG</span>
                 <h1 className='dark:text-white text-gray-900 font-bold text-3xl md:text-4xl py-3'>Tentang HMIF UNEJ</h1>
-                <p className='pt-3 text-gray-500 dark:text-gray-300 md:text-xl'>Cari tau lebih dalam mengenai Himpunan Mahasiswa Informatika Universitas Jember.</p>
+                <p className='pt-3 text-gray-500 dark:text-gray-300'>Cari tau lebih dalam mengenai Himpunan Mahasiswa Informatika Universitas Jember.</p>
             </div>
         </div>
 

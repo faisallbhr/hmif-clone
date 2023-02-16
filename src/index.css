@@ -82,3 +82,7 @@
 .swiper-pagination-bullet-active{
     background-color: rgb(16,185,129) !important;
 }
+
+.div-active{
+    @apply text-white bg-green-600 border;
+}
