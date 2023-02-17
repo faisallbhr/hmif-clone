@@ -84,5 +84,5 @@
 }
 
 .div-active{
-    @apply text-white bg-green-600 border;
+    @apply text-white bg-green-600 outline outline-1;
 }

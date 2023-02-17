@@ -17,10 +17,9 @@ const Staff = () => {
     }, [])
 
     const [pickStaff, setPickStaff] = useState([{role: ''}])
-
     const [btnState, setBtnState] = useState(false)
-
     const [name, setName] = useState('')
+    
     const handleBtn = (e)=> {
         setName(e.target.name)
         setPickStaff(staff.filter(q => q.role === e.target.name))
@@ -30,6 +29,8 @@ const Staff = () => {
             setBtnState(btnState=>!btnState)
         }
     }
+
+
     useEffect(()=>{
         const division = document.getElementsByClassName('division')
         const cek = document.getElementsByName(`${name}`)
@@ -52,9 +53,20 @@ const Staff = () => {
         }
     }, [btnState, name])
     
+    const [search, setSearch] = useState('')
+    console.log(search)
     const ViewStaff = ()=> {
         if (btnState===false){
-            return staff.map((person, i) => {
+            return staff
+            // eslint-disable-next-line
+            .filter((person)=>{
+                if(search===''){
+                    return person
+                }else if(person.name.toLowerCase().includes(search.toLowerCase())){
+                    return person
+                }
+            })
+            .map((person, i) => {
                 return(
                     <div className='relative items-center border border-gray-300 dark:border-gray-700 text-center rounded-lg p-4 w-80 h-80' key={i}>
                         <div className='absolute whitespace-nowrap left-1/2 -translate-x-1/2 text-xs bg-green-500 rounded-full font-bold py-1 px-2.5'>{person.role}</div>
@@ -67,26 +79,34 @@ const Staff = () => {
                             <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
                         </div>
                     </div>
-            )
-        })
-    }else{
-        return pickStaff.map((person, i) => {
-            
-            return(
-                <div className='relative items-center border border-gray-300 dark:border-gray-700 text-center rounded-lg p-4 w-80 h-80' key={i}>
-                    <div className='absolute whitespace-nowrap left-1/2 -translate-x-1/2 text-xs bg-green-500 rounded-full font-bold py-1 px-2.5'>{person.role}</div>
-                    <img className='rounded-lg' src={`${imageUrl}/${person.image}`} alt="" />
-                    <div className='py-4 font-bold text-xl text-gray-700 dark:text-white'>{person.name}</div>
-                    <div className='text-gray-500 dark:text-gray-300'>{person.name_role}</div>
-                    <div className='flex justify-center gap-4 pt-4'>
-                        <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiLinkedin className='w-5 h-5'/></a>
-                        <a href={person.ig_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
-                        <a href={person.gh_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
+                )
+            })
+        }else{
+            return pickStaff
+            // eslint-disable-next-line
+            .filter((person)=>{
+                if(search===''){
+                    return person
+                }else if(person.name.toLowerCase().includes(search.toLowerCase())){
+                    return person
+                }
+            })
+            .map((person, i) => {
+                return(
+                    <div className='relative items-center border border-gray-300 dark:border-gray-700 text-center rounded-lg p-4 w-80 h-80' key={i}>
+                        <div className='absolute whitespace-nowrap left-1/2 -translate-x-1/2 text-xs bg-green-500 rounded-full font-bold py-1 px-2.5'>{person.role}</div>
+                        <img className='rounded-lg' src={`${imageUrl}/${person.image}`} alt="" />
+                        <div className='py-4 font-bold text-xl text-gray-700 dark:text-white'>{person.name}</div>
+                        <div className='text-gray-500 dark:text-gray-300'>{person.name_role}</div>
+                        <div className='flex justify-center gap-4 pt-4'>
+                            <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiLinkedin className='w-5 h-5'/></a>
+                            <a href={person.ig_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
+                            <a href={person.gh_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
+                        </div>
                     </div>
-                </div>
-        )
-    })
-    }
+                )
+            })
+        }
     }
 
     return (
@@ -100,8 +120,8 @@ const Staff = () => {
                     <p className='pt-3 text-gray-500 dark:text-gray-300'>Sekelompok orang yang berada dalam satu kondisi dan satu tempat yang sama, dibesarkan dengan latar belakang yang berbeda beda namun tetap memiliki rasa kekeluargaan dan visi misi yang sama.</p>
                     <p className='pt-3 text-gray-800 dark:text-gray-200 font-bold'>"Banyak Susahnya Namun Tetap Bersama."</p>
                 </div>
-                <div className='max-w-4xl mx-auto px-4 pb-20'>
-                    <div className='flex flex-wrap justify-center  border border-green-600 rounded-lg font-semibold text-green-600 text-sm'>
+                <div className='max-w-4xl mx-auto px-4 pb-10'>
+                    <div className='flex flex-wrap justify-center border border-green-600 rounded-lg font-semibold text-green-600 text-sm '>
                         <button name='Badan Pengurus Harian' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>BPH</button>
                         <button name='Hubungan Masyarakat' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>HUMAS</button>
                         <button name='Kewirausahaan' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>KWU</button>
@@ -109,6 +129,7 @@ const Staff = () => {
                         <button name='Media dan Teknologi' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>MEDIATEK</button>
                         <button name='Pengembangan Sumber Daya Manusia' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>PSDM</button>
                     </div>
+                    <input onChange={(e)=> setSearch(e.target.value)} placeholder='Cari pengurus...' className='text-black mt-10 px-2 rounded-md' type="text" />
                 </div>
             </div>
 
