@@ -19,15 +19,39 @@ const Staff = () => {
     const [pickStaff, setPickStaff] = useState([{role: ''}])
 
     const [btnState, setBtnState] = useState(false)
+
+    const [name, setName] = useState('')
     const handleBtn = (e)=> {
-        setPickStaff(staff.filter(q => q.role === e.target.value))
-        if (pickStaff[0].role !== e.target.value){
+        setName(e.target.name)
+        setPickStaff(staff.filter(q => q.role === e.target.name))
+        if (pickStaff[0].role !== e.target.name){
             setBtnState(true)
         }else{
             setBtnState(btnState=>!btnState)
         }
     }
-
+    useEffect(()=>{
+        const division = document.getElementsByClassName('division')
+        const cek = document.getElementsByName(`${name}`)
+        if(btnState===true){
+            for (let i=0; i<division.length;i++){
+                const accept = division[i].name //mengambil name dari class divisi yang dipilih
+                if(name===accept){
+                    cek[0].classList.add('div-active')
+                }else{
+                    division[i].classList.remove('div-active')
+                }
+            }
+        }else{
+            for (let i=0; i<division.length;i++){
+                const accept = division[i].name //mengambil name dari class divisi yang dipilih
+                if(name===accept){
+                    cek[0].classList.remove('div-active')
+                }
+            }
+        }
+    }, [btnState, name])
+    
     const ViewStaff = ()=> {
         if (btnState===false){
             return staff.map((person, i) => {
@@ -47,6 +71,7 @@ const Staff = () => {
         })
     }else{
         return pickStaff.map((person, i) => {
+            
             return(
                 <div className='relative items-center border border-gray-300 dark:border-gray-700 text-center rounded-lg p-4 w-80 h-80' key={i}>
                     <div className='absolute whitespace-nowrap left-1/2 -translate-x-1/2 text-xs bg-green-500 rounded-full font-bold py-1 px-2.5'>{person.role}</div>
@@ -77,12 +102,12 @@ const Staff = () => {
                 </div>
                 <div className='max-w-4xl mx-auto px-4 pb-20'>
                     <div className='flex flex-wrap justify-center  border border-green-600 rounded-lg font-semibold text-green-600 text-sm'>
-                        <button id='bph' value='Badan Pengurus Harian' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>BPH</button>
-                        <button id='humas' value='Hubungan Masyarakat' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>HUMAS</button>
-                        <button id='kwu' value='Kewirausahaan' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>KWU</button>
-                        <button id='litbang' value='Penelitian dan Pengembangan' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>LITBANG</button>
-                        <button id='mediatek' value='Media dan Teknologi' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>MEDIATEK</button>
-                        <button id='psdm' value='Pengembangan Sumber Daya Manusia' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>PSDM</button>
+                        <button name='Badan Pengurus Harian' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>BPH</button>
+                        <button name='Hubungan Masyarakat' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>HUMAS</button>
+                        <button name='Kewirausahaan' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>KWU</button>
+                        <button name='Penelitian dan Pengembangan' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>LITBANG</button>
+                        <button name='Media dan Teknologi' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>MEDIATEK</button>
+                        <button name='Pengembangan Sumber Daya Manusia' onClick={handleBtn}  className='division md:mx-6 rounded-md cursor-pointer hover:text-white hover:bg-green-600 py-4 px-4 my-1'>PSDM</button>
                     </div>
                 </div>
             </div>
