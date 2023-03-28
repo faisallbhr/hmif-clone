@@ -18,7 +18,7 @@ const Blog = () => {
           <div className='md:w-1/2 px-20 md:pt-20'>
             <p className='text-3xl font-bold pb-4 text-gray-700 dark:text-white'>Blog</p>
             <p className='lg:text-lg text-gray-500 dark:text-gray-300'>Cari tahu berbagai informasi, tips dan trik menarik seputar teknologi yang sudah kami rangkum untuk dapat kalian baca kapanpun dan dimanapun.</p>
-            <p className='text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 pt-2'><a href="#">Selengkapnya</a></p>
+            <p className='text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 pt-2'><button>Selengkapnya</button></p>
           </div>
           <div className='relative md:left-16 md:w-1/2 mt-40 md:-mt-20'>
               <img data-aos="fade-up-left"
@@ -86,7 +86,7 @@ const Blog = () => {
           <div className='md:w-1/2 py-10 px-20'>
             <p className='text-3xl font-bold pb-4 text-gray-700 dark:text-white'>Divisi</p>
             <p className='lg:text-lg text-gray-500 dark:text-gray-300'>Terdapat lima divisi yang kami miliki dan tiap divisi menjalankan tugasnya masing-masing. Cari tahu lebih lanjut mengenai tugas dan tanggung jawab masing-masing divisi.</p>
-            <p className='text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 pt-2'><a href="#">Selengkapnya</a></p>
+            <p className='text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 pt-2'><button>Selengkapnya</button></p>
           </div>
         </div>
       </div>

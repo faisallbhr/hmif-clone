@@ -13,7 +13,7 @@ const Hero = () => {
             <p className='py-8 md:text-lg  lg:text-xl'>Himpunan Mahasiswa Informatika (HMIF) Universitas Jember merupakan organisasi dibawah naungan Fakultas Ilmu komputer yang bertujuan untuk menampung aspirasi serta meningkatkan kualitas mahasiswa di dalam lingkungan program studi Informatika Universitas Jember.</p>
           <div className='text-center flex flex-col md:flex-row md:justify-center lg:justify-start gap-2'>
               <NavLink to='/tentang' className='bg-[rgb(16,185,129)] rounded-[4px] text-lg py-2 font-bold md:px-6'>Tentang</NavLink>
-              <a href='https://card.hmifunej.id/' target='_blank' className='rounded-[4px] border-[2px] border-[rgb(16,185,129)] text-lg py-2 font-bold md:px-6'>Card</a>
+              <a href='https://card.hmifunej.id/' target='_blank' rel="noreferrer" className='rounded-[4px] border-[2px] border-[rgb(16,185,129)] text-lg py-2 font-bold md:px-6'>Card</a>
           </div>
         </div>
         <div className='hidden md:block my-auto '>

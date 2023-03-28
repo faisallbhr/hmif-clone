@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect, useRef, useCallback} from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {RiCloseFill} from 'react-icons/ri'
 import {BsSun,BsMoonStars} from 'react-icons/bs'
@@ -29,9 +29,9 @@ const Navbar = () => {
   // DARKMODE
   const [theme, setTheme] = useState('dark')
   
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
       setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  }, [theme])
 
   useEffect(() => {
     if (theme==='dark'){
@@ -39,7 +39,7 @@ const Navbar = () => {
     }else{
     document.documentElement.classList.remove('dark')
     }
-  }, [toggleTheme])
+  }, [toggleTheme,theme])
 
   return (
     <header className='fixed w-full bg-[hsla(0,0%,100%,.6)] dark:bg-[rgba(0,30,38,.6)] backdrop-blur-md z-10' ref={menuRef}>  
