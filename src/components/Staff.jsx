@@ -6,7 +6,6 @@ const Staff = () => {
     const url = 'https://api-developer.hmifunej.id/api/getStaff'
     const imageUrl = 'https://api-developer.hmifunej.id/assets/upload/staff'
     const [staff, setStaff] = useState([])
-    const [pickStaff, setPickStaff] = useState([])
     const [periodYear, setPeriodYear] = useState([])
 
     const getDataStaff = async ()=> {
@@ -18,20 +17,22 @@ const Staff = () => {
     useEffect(()=> {
         getDataStaff()
     }, [])
-
-    const [btnState, setBtnState] = useState(false)
-    const [name, setName] = useState('')
-
+    
     // SELECT PERIODE
+    useEffect(()=> {
+        setPeriodYear(staff.filter((q) => q.period_year.split('/')[1] === '2023'))
+    }, [staff])
+
     const selectPeriod = (e) => {
         setPeriodYear(staff.filter((q) => q.period_year.split('/')[1] === e.target.value))
     }
     
     // SELECT DIVISION
+    const [btnState, setBtnState] = useState(false)
+    const [name, setName] = useState('')
     const handleBtn = (e) => {
-        setPickStaff(periodYear.filter(q => q.role === e.target.name))
         setName(e.target.name)
-        if (pickStaff[0].role !== e.target.name){
+        if (name !== e.target.name){
             setBtnState(true)
         }else{
             setBtnState(btnState=>!btnState)
@@ -59,10 +60,10 @@ const Staff = () => {
                 }
             }
         }
-    }, [btnState, name])
+    }, [btnState, name,periodYear])
 
+    
     const [search, setSearch] = useState('')
-    console.log(search)
     const ViewStaff = ()=> {
         if (btnState===false){
             return periodYear
@@ -114,6 +115,8 @@ const Staff = () => {
                         </div>
                     </div>
                     )
+                }else{
+                    return ''
                 }
             })
         }
@@ -153,7 +156,7 @@ const Staff = () => {
             </div>
 
             <div className='bg-gray-100 dark:bg-gray-900 py-20'>
-                <div className='max-w-7xl min-h-screen flex flex-wrap mx-auto justify-center gap-10'>
+                <div className='max-w-7xl min-h-[100px] flex flex-wrap mx-auto justify-center gap-10'>
                     <ViewStaff />
                 </div>
             </div>
