@@ -84,8 +84,8 @@ const Staff = () => {
                         <div className='text-gray-500 dark:text-gray-300'>{person.name_role}</div>
                         <div className='flex justify-center gap-4 pt-4'>
                             <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiLinkedin className='w-5 h-5'/></a>
-                            <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
-                            <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
+                            <a href={person.ig_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
+                            <a href={person.gh_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
                         </div>
                     </div>
                 )
@@ -110,8 +110,8 @@ const Staff = () => {
                         <div className='text-gray-500 dark:text-gray-300'>{person.name_role}</div>
                         <div className='flex justify-center gap-4 pt-4'>
                             <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiLinkedin className='w-5 h-5'/></a>
-                            <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
-                            <a href={person.li_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
+                            <a href={person.ig_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiInstagram className='w-5 h-5'/></a>
+                            <a href={person.gh_link} target='_blank' rel="noreferrer" className='bg-gray-600 dark:bg-gray-300 dark:text-gray-800 p-[2px] rounded-md border border-gray-300'><FiGithub className='w-5 h-5'/></a>
                         </div>
                     </div>
                     )
