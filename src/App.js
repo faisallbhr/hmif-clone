@@ -11,9 +11,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import StaffPage from "./pages/StaffPage";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 1500);
